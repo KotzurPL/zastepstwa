@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    
+    <definition name="base.definition"  
+        template="/WEB-INF/layout/layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />  
+        <put-attribute name="menu" value="/WEB-INF/layout/menu.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />  
+    </definition>
+    
+    <definition name="view.definition"  
+        template="/WEB-INF/layout/layoutView.jsp">  
+        <put-attribute name="title" value="" />
+        <put-attribute name="body" value="" />
+    </definition>
+    
+    <definition name="glowny" extends="base.definition">  
+        <put-attribute name="title" value="Główna" />  
+        <put-attribute name="body" value="/WEB-INF/views/glowny.jsp" />  
+    </definition>  
+  
+    <definition name="listaZastepstw" extends="base.definition">  
+        <put-attribute name="title" value="Zastępstwo::Lista" />  
+        <put-attribute name="body" value="/WEB-INF/views/listaZastepstw.jsp" />  
+    </definition>
+
+    <definition name="dodajZastepstwo" extends="base.definition">  
+        <put-attribute name="title" value="Zastępstwo::Dodaj" />  
+        <put-attribute name="body" value="/WEB-INF/views/dodajZastepstwo.jsp" />  
+    </definition>
+    
+    <definition name="zastepstwa" extends="view.definition">  
+        <put-attribute name="title" value="Zastępstwo::Monitor" />  
+        <put-attribute name="body" value="/WEB-INF/views/zastepstwa.jsp" />  
+    </definition>
+
+    <definition name="listaNauczycieli" extends="base.definition">  
+        <put-attribute name="title" value="Nauczyciel::Lista" />  
+        <put-attribute name="body" value="/WEB-INF/views/listaNauczycieli.jsp" />  
+    </definition>
+
+    <definition name="dodajNauczyciela" extends="base.definition">  
+        <put-attribute name="title" value="Nauczyciel::Dodaj" />  
+        <put-attribute name="body" value="/WEB-INF/views/dodajNauczyciela.jsp" />  
+    </definition>
+    
+    <definition name="listaPrzedmiotow" extends="base.definition">  
+        <put-attribute name="title" value="Przedmiot::Lista" />  
+        <put-attribute name="body" value="/WEB-INF/views/listaPrzedmiotow.jsp" />  
+    </definition>
+
+    <definition name="dodajPrzedmiot" extends="base.definition">  
+        <put-attribute name="title" value="Przedmiot::Dodaj" />  
+        <put-attribute name="body" value="/WEB-INF/views/dodajPrzedmiot.jsp" />  
+    </definition>
+    
+    <definition name="listaGodzin" extends="base.definition">  
+        <put-attribute name="title" value="Godzina::Lista" />  
+        <put-attribute name="body" value="/WEB-INF/views/listaGodzin.jsp" />  
+    </definition>
+
+    <definition name="dodajGodzine" extends="base.definition">  
+        <put-attribute name="title" value="Godzina::Dodaj" />  
+        <put-attribute name="body" value="/WEB-INF/views/dodajGodzine.jsp" />  
+    </definition>
+    
+    <definition name="listaKlas" extends="base.definition">  
+        <put-attribute name="title" value="Klasa::Lista" />  
+        <put-attribute name="body" value="/WEB-INF/views/listaKlas.jsp" />  
+    </definition>
+
+    <definition name="dodajKlase" extends="base.definition">  
+        <put-attribute name="title" value="Klasa::Dodaj" />  
+        <put-attribute name="body" value="/WEB-INF/views/dodajKlase.jsp" />  
+    </definition>
+
+</tiles-definitions>  
